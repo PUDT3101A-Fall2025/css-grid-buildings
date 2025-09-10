@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Building</title>
+  </head>
+  <style>
+    #building {
+      width: 500px;
+      height: 800px;
+      margin: 0 auto;
+      background: #eee;
+      display: grid;
+      padding: 20px;
+      grid-template-columns: repeat(9, 1fr);
+      column-gap: 10px;
+      grid-template-rows: repeat(5, 1fr);
+      row-gap: 10px;
+    }
+
+    .window {
+      border: solid 5px black;
+    }
+
+    .arch {
+      margin: 10px 10px 0;
+      border-top-left-radius: 70px;
+      border-top-right-radius: 70px;
+    }
+  </style>
+  <body>
+    <div id="building"></div>
+  </body>
+  <script>
+    let building = document.getElementById("building");
+
+    for (let i = 1; i <= 9; ++i) {
+      let window = document.createElement("div");
+      window.className = "window";
+      window.style.gridRow = 1;
+      window.style.gridColumn = i;
+      building.appendChild(window);
+    }
+
+    for (let i = 0; i < 3; ++i) {
+      let window = document.createElement("div");
+      window.className = "window arch";
+      window.style.gridRow = "2 / 6";
+      window.style.gridColumnStart = i * 3 + 1;
+      window.style.gridColumnEnd = i * 3 + 4;
+      building.appendChild(window);
+    }
+  </script>
+</html>
