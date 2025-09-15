@@ -10,8 +10,6 @@
         display: grid;
         grid-template-rows: 1fr 2fr 1fr 2fr 2fr;
         /* grid-template-columns: 50% 25% 25%; */
-
-        /* grid-template-columns: [left] 1fr 1fr [middle] 1fr 1fr; */
         grid-template-columns: 2fr 1fr 1fr 1fr;
         /* align-self: stretch; */
       }
@@ -24,13 +22,16 @@
       #winbar2 {
         background: rgb(104, 104, 33);
         grid-column: 4;
-        grid-row: 2/3;
+        /* grid-row: 1/3; */
+        grid-row-start: 1;
+        grid-row-end: 3;
       }
 
       #winbar3 {
         background: rgb(236, 236, 59);
-        grid-column: 1/4;
-        grid-row: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        /* grid-row: ; */
       }
     </style>
   </head>
@@ -41,6 +42,6 @@
     <div id="winbar1"></div>
     <div id="winbar2"></div>
     <div id="winbar3"></div>
-    <div id="item4"></div>
+    <div id="windowglass"></div>
   </body>
 </html>
