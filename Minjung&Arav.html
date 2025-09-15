@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Title</title>
+
+    <style>
+      body {
+        height: 800px;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr 2fr 2fr;
+        /* grid-template-columns: 50% 25% 25%; */
+
+        /* grid-template-columns: [left] 1fr 1fr [middle] 1fr 1fr; */
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        /* align-self: stretch; */
+      }
+
+      #winbar1 {
+        background: rgb(139, 139, 61);
+        grid-column: 1/4;
+      }
+
+      #winbar2 {
+        background: rgb(104, 104, 33);
+        grid-column: 4;
+        grid-row: 2/3;
+      }
+
+      #winbar3 {
+        background: rgb(236, 236, 59);
+        grid-column: 1/4;
+        grid-row: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="item1">Item 1</div>
+    <div id="item2">Item 2</div>
+    <button>Click Me!</button> -->
+    <div id="winbar1"></div>
+    <div id="winbar2"></div>
+    <div id="winbar3"></div>
+    <div id="item4"></div>
+  </body>
+</html>
