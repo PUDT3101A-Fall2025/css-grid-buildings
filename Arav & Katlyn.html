@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Earth Face</title>
+    <style>
+        body 
+        {
+        display: grid;
+        background-color: rgb(154, 154, 154);
+        grid-template-rows: 100px, 200px, 100px, 200px, 200px;
+        grid-template-columns: 200px, 100px, 100px, 200px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+
+        }
+            
+
+          #windowglass
+            {   
+            grid-row: 1;
+            grid-column: 1;
+            background-color: rgb(176, 170, 143);
+            height: 300px;
+            }
+
+
+        
+
+              #Winbar3
+            {
+            grid-row: 3;
+            grid-column: 1 span 4;
+    
+            background-color: rgb(0, 0, 0);
+            height: 300px;
+           
+            }
+
+
+
+              #Winbarz
+            {
+            grid-row: 3;
+            grid-column: 1 span 4;
+    
+            background-color: rgb(176, 170, 143);
+            height: 300px;
+           
+            }
+        #Winbar2
+            {
+            grid-row: 1;
+            grid-column: 2;
+            background-color: rgb(176, 170, 143);
+            height: 300px;
+           
+            }
+
+
+          
+        #Winbar1
+            {
+            grid-row: 4;
+            grid-column: 1;
+            background-color: rgb(176, 170, 143);
+            height: 70px;
+           
+            }
+
+
+             #Winbarx
+            {
+            grid-row: 4;
+            grid-column: 2;
+            background-color: rgb(176, 170, 143);
+            height: 70px;
+           
+            }
+
+
+            
+     #pillar1
+            {
+            grid-row: 5;
+            grid-column: 2 span 1;
+            background-color: rgb(88, 88, 88);
+            height: 300px;
+            width: 50px;
+            
+            }
+           
+     #pillar2
+            {
+            grid-row: 5;
+            grid-column: 2 spand 3;
+            background-color: rgb(88, 88, 88);
+            height: 300px;
+            width: 100px;
+            
+            }
+
+
+    #glasswall
+            {
+            grid-row: 5;
+            grid-column: 2 span 1 ;
+            background-color: rgb(47, 0, 215);
+            height: 300px;
+            width: 100%;
+            
+            }
+
+            
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="Winbar1"></div>
+    <div id="Winbar2"></div>
+    <div id="Winbar3"></div>
+     <div id="Winbarz"></div>
+     <div id="Winbarx"></div>
+
+    <div id="windowglass"></div>
+
+    <div id="pillar1"></div>
+    <div id="pillar2"></div>
+
+    <div id="door"></div>
+
+    <div id="glasswall"></div>
+   
+  </body>
+</html>
+
+
+<script>
+    const button = document.querySelector("button");
+    const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink", "brown", "gray", "cyan"];
+    
+    button.addEventListener("click", () => {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+        
+    });
