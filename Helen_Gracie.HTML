@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>Grid Tower </title>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body { display: grid; place-items: center; background:#fff; }
+
+  
+  .frame{
+    position: relative;
+ 
+    width: 230px;
+    height: 85vh;
+  }
+  .frame::before{
+    content:"";
+    position:absolute; inset:0;
+    border: 2px solid #000;
+  
+    clip-path: polygon(0% 19%, 100% 0%, 100% 100%, 0% 100%);
+   
+    
+    
+  }
+
+
+  #tower{
+    position:absolute; inset: 10px;  
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 8px;                
+   
+    align-items: end;
+  }
+
+
+  .col{
+    display:grid;
+    grid-auto-rows: 14px;            
+    row-gap: 8px;                   
+  }
+
+  
+  .cell{
+    border: 1px solid #000;
+    
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div id="tower"></div>
+  </div>
+
+  <script>
+    
+    const counts = [21,22,23,24,25,26,,27,28,29,30];
+
+    const tower = document.getElementById('tower');
+
+    counts.forEach(n => {
+      const col = document.createElement('div');
+      col.className = 'col';
+      
+      for (let i = 0; i < n; i++){
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        col.appendChild(cell);
+      }
+      tower.appendChild(col);
+    });
+
+    
+    
+    
+  </script>
+</body>
+</html>
